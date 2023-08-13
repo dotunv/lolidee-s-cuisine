@@ -1,0 +1,78 @@
+.order form{
+    background-color: var(--color-4);
+    padding: 2rem;
+}
+.order{
+    background-color: var(--color-1);
+    padding: 2rem;
+    width: 90%;
+    margin-inline: auto;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.order .heading span,h3{
+ color: var(--color-4);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin: 18px;
+}
+/*.order form .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}*/
+.order form .box-container .box{
+    flex:1 1.41rem;
+}
+.order form .box-container .box .inputbox input,
+.order form .box-container .box .inputbox textarea{
+    width: 100%;
+    margin: 2rem o;
+    padding:1.2rem 1.4rem;
+    font-size: 16px;
+    color: var(--color-3);
+    border: 2px dotted var(--color-3);
+    text-transform: none;
+
+}
+.order form .box-container .box .inputbox textarea{
+    height: 10rem;
+    resize: none;
+}
+.order form .box-container .box .inputbox span{
+    color: var(--color-3);
+    font-size: 18px;
+}
+ .btn{
+    width: 100%;
+    text-transform: none;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: ;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: inherit;
+    line-height: 1.5;
+    color: var(--color-4);
+border: 2px solid var(--color-1);
+    user-select: none;
+    background-color: var(--color-1);
+    margin-top: 30px;
+    
+}
+ .btn:hover{
+    color: var(--color-4);
+    background-color: var(--color-1);
+}
+
+@media(min-width:750px){
+    .order form .box-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+}

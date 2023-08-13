@@ -1,0 +1,125 @@
+/*menu section*/
+.menu-section .section-title{
+    margin-bottom: 40px;
+    text-align: center;
+}
+.menu-tabs{
+    padding: 0 15px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+.section-title p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.5;
+    
+}
+.menu-tabs h2{
+display: flex;
+align-items: center;
+justify-content: center;
+
+
+}
+.menu-tab-item{
+    font-size: 15px;
+    border: none;
+    background-color: transparent;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 0 10px 10px;
+    transition: all 0.4s ease;
+    display: inline-block;
+}
+.menu-tab-item.active{
+    color: var(--color-1);
+}
+.menu-item{
+    width: 50%;
+    padding: 20px 15px;
+    display: flex;
+    gap: 7%;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.menu-item::after{
+    content: '';
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 0;
+    border-bottom: 1.5px dashed var(--color-1);
+}
+.menu-item:nth-last-of-type(2)::after,
+.menu-item:nth-last-of-type(1)::after{
+    border: none;
+}
+.menu-tab-content.active{
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu-tab-content.cakes{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-item img{
+    width: 60%;
+    margin-right: 10px;
+}
+.menu-item-title{
+    display: flex;
+    align-items: center;
+    max-width: calc(100% - 80px);
+
+}
+.menu-item .btn{
+    text-transform: capitalize;
+    display: inline-block;
+    padding: 8px 50px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: inherit;
+    line-height: 1;
+    color: var(--color-1);
+border: 1.5px solid var(--color-1);
+    user-select: none;
+    background-color: transparent;
+    
+}
+.menu-item .btn:hover{
+    color: var(--color-4);
+    background-color: var(--color-1);
+}
+.cake{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu-tab-content .cakes{
+    display: flex;
+    
+}
+@media(max-width:800px){
+.menu-item{
+    width: 100%;
+}
+.menu-item .btn{
+    padding: 8px 30px;
+}
+.menu-item:nth-last-of-type(2)::after{
+    border-bottom: 1.5px dashed var(--color-1);
+}
+}
+
+
+                                         

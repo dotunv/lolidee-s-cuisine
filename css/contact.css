@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-1: #ED7014;
+    --color-2: #D21404;
+    --color-3:#000000;
+    --color-4:#ffffff;
+    }
+    
+    .contact h2,p{
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        place-items: center;
+        margin: 30px;
+        
+    }
