@@ -1,0 +1,53 @@
+
+
+img{
+    max-width: auto;
+    max-height: 100vh;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  width: 50%;
+}
+.landing .part .button{
+  display:block;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: inherit;
+  line-height: 1.5;
+  color: var(--color-1);
+  user-select: none;
+  border: 1.5px solid var(--color-1);
+  background-color: #171616;
+  margin: auto;
+  width: 20%;
+  
+  
+}
+.part{
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 24px;
+}
+
+  
+.part .button:hover{
+    color:#ffffff;
+    background-color: var(--color-1);
+    width: 20%;
+    
+}
+
+ .sign{
+    color: var(--color-1);
+    font-size: 14px;
+    margin-left: 8px;
+    font-weight: 500;
+}
+.par p{
+  font-size: 14px;
+}
