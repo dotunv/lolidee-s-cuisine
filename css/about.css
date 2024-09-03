@@ -193,6 +193,7 @@ html::-webkit-scrollbar-thumb{
  .hero-section .content .text{
     width: 80%;
     margin-left: 3rem;
+    margin-top: 4%;
 
 
 
@@ -226,6 +227,7 @@ html::-webkit-scrollbar-thumb{
     .her .text{
         width: 60%;
         margin-left: 8rem;
+        margin-top: 4%;
     }
     .her .text h3{
         font-size: 28px;
