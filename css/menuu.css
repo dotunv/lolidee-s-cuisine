@@ -164,7 +164,7 @@ html::-webkit-scrollbar-thumb{
         
     }
     .search .j  a{
-              margin-top: -40%;
+              margin-top: -22%;
         text-transform: capitalize;
                 display: inline-block;
                 padding: 15px;
@@ -203,7 +203,7 @@ html::-webkit-scrollbar-thumb{
             }
     .search input{
         margin: 0px 0px;
-        margin-bottom: 30px;
+        margin-bottom: 16px;
         height: 56px;
        width: 70%;
         padding-left: 24px;
@@ -374,14 +374,13 @@ background-color: #faf3ec;
      padding: 0 3%;
      background-color: transparent;
      margin: auto;
-     gap: 2rem;
+     gap: 1.3rem;
      }
      .discover .all{
         gap: 1rem;
      }
  
  .discover h2{
- margin: 20px 0px;
  font-size: 25px;
  text-align: left;
 

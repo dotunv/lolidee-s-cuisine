@@ -784,7 +784,7 @@ html::-webkit-scrollbar-thumb{
         font-size: 30px;
     }
     .nav h2{
-        font-size: 30px;
+        font-size: 24px;
         margin-top: 6%;
     }
 
@@ -806,6 +806,7 @@ html::-webkit-scrollbar-thumb{
     }
     .delivery h2{
         margin-top: 5%;
+        font-size: 20px;
     }
 
     .payment{
@@ -866,6 +867,7 @@ html::-webkit-scrollbar-thumb{
         margin-bottom: 3%;
         width: 100%;
         border-radius: 10px;
+        margin: 1% auto;
     
     
     }
@@ -903,7 +905,7 @@ html::-webkit-scrollbar-thumb{
     .two{
         display: flex;
         flex-direction: row;  
-        gap: 7%;
+        gap: 5%;
         margin-bottom: 10%;
     }
     .two h3{
@@ -914,7 +916,7 @@ html::-webkit-scrollbar-thumb{
         padding: 5px;
         border: 1.5px solid black;
         font-size: 16px;
-        margin: 0 2px;
+        margin: 0 1px;
         font-weight: 600;
         
     }
@@ -1000,7 +1002,7 @@ html::-webkit-scrollbar-thumb{
         .sub{
             display: flex;
             flex-direction: row;
-            gap:52%;
+            gap:53%;
             margin-top: 2%;
            
         }

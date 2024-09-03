@@ -167,9 +167,8 @@ html::-webkit-scrollbar-thumb{
  .home .homepage{
     text-align: left;
     width: 70%;
-    margin-top: 0vh;
     margin: auto;
-    padding: 1% 4%;
+    padding: 0.5% 4%;
     
  }  
  .home .slide img{
@@ -178,10 +177,13 @@ html::-webkit-scrollbar-thumb{
     height: 80vh;
     margin-top: 5vh;
  }
+ .home .homepage .text{
+    margin-top: -10%;
+ }
  .home .homepage .text p{
     font-size: 16px;
     margin-bottom: 0.1rem;
-    color: #747474;
+    color: #acacac;
     text-align: left;
     width: 80%;
     margin-left: -0.1%;
@@ -294,7 +296,7 @@ html::-webkit-scrollbar-thumb{
                     
                  }  
                  .home .slide img{
-                    border-radius: 50%;
+                    border-radius: 60%;
                     width: 100%;
                     height: 60vh;
                     margin-top: 3vh;
@@ -397,7 +399,7 @@ html::-webkit-scrollbar-thumb{
          .homepage{
                 text-align: left;
                 width: 100%;
-                margin-top: 2%;
+                margin-top: 0.5%;
                 margin: auto;
                 padding: 1% 3%;
                 
@@ -427,7 +429,7 @@ html::-webkit-scrollbar-thumb{
              } 
             
              .home .homepage h2{
-                font-size: 50px;
+                font-size: 55px;
             
                 color:white;
                 text-transform: capitalize;
@@ -508,6 +510,7 @@ html::-webkit-scrollbar-thumb{
         justify-content: center;
         width: 100%;
         margin-bottom: -20%;
+        margin: 1ren auto;
         
         
     }
@@ -542,6 +545,7 @@ html::-webkit-scrollbar-thumb{
        align-items: center;
        justify-content: center;
        margin: auto;
+       
    
    }
 .icon-container .icons{
@@ -553,6 +557,7 @@ html::-webkit-scrollbar-thumb{
        justify-content: center;
        width: 100%;
        margin-bottom: auto;
+      
        
        
    }
@@ -589,6 +594,7 @@ html::-webkit-scrollbar-thumb{
     margin-top: 7%;
     margin-left: 1.5rem;
     width: 96%;
+    margin: auto;
     
 
 }
@@ -711,6 +717,7 @@ html::-webkit-scrollbar-thumb{
        margin: auto;
         background-color: #ffffff;
         margin-top: 10%;
+        margin-bottom: 15%;
     
     
 
@@ -771,6 +778,7 @@ html::-webkit-scrollbar-thumb{
         height:60vh;
         object-fit: cover;
         margin: auto;
+        margin-left: 2%;
         
     }
     .tutorial-image{
@@ -1202,7 +1210,7 @@ background-color: var(--color-1);
         margin-top: 15px;
         display: flex;
         flex-direction: row;
-        gap: 6%;
+        gap: 7%;
     }
     .footer .social-links li  a{
       font-size: 20px;
