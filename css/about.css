@@ -548,7 +548,8 @@ html::-webkit-scrollbar-thumb{
                        width: 90%;
                        text-align: left;
                        margin: auto;
-                       margin-top: 110%;
+                       margin-top: 120%;
+                       margin-bottom: 4%;
                    }
                    .her .text h3{
                        font-size: 28px;
