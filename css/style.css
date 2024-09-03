@@ -433,7 +433,7 @@ html::-webkit-scrollbar-thumb{
             
                 color:white;
                 text-transform: capitalize;
-               
+               margin-top: -3%;
                 line-height: 1;
              }                                                      
              .home .homepage .text .btn{
