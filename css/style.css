@@ -363,7 +363,6 @@ html::-webkit-scrollbar-thumb{
                         background-color: transparent;
                         margin-top: 2rem;
                         width: 40%;
-                        margin-left: 3%;
                         text-align: center;
                     }
                     .home .homepage .text .butn:hover{
