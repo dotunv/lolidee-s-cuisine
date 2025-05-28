@@ -18,11 +18,11 @@
     }
 </script>
 
-<nav class="navbar {isHamburgerActive ? 'active' : ''}">
+<nav class="navbar">
     <a href="/" class="logo" on:click={handleLinkClick}>
         <img src="images/logo.jpg" class="img" alt="Lolidee's Cuisine Logo" />
     </a>
-    <ul class="nav-menu" id="navbar-menu">
+    <ul class="nav-menu {isHamburgerActive ? 'active' : ''}" id="navbar-menu">
         <li class="nav-item"><a href="/" class="nav-link" aria-current={$page.url.pathname === '/'} on:click={handleLinkClick}>Home</a></li>
         <li class="nav-item"><a href="/menu" class="nav-link" aria-current={$page.url.pathname  === '/menu'} on:click={handleLinkClick}>Our Menu</a></li>
         <li class="nav-item"><a href="/cart" class="nav-link" aria-current={$page.url.pathname === '/cart'} on:click={handleLinkClick}>Cart</a></li>
@@ -45,113 +45,115 @@
 </nav>
 
 <style>
-    /* Basic styles to ensure functionality; your style.css will handle the main look */
     .navbar {
-      position: sticky;
-      min-height: 80px;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 var(--spacing-lg);
-      background-color: var(--color-light);
-      box-shadow: var(--shadow-sm);
-      z-index: 1000;
-    }
-  
-    .nav-menu {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: var(--spacing-xl);
-    }
-  
-    .nav-link {
-      color: var(--color-dark);
-      font-weight: 500;
-      position: relative;
-      padding: var(--spacing-xs) 0;
-    }
-  
-    .nav-link[aria-current='page'] {
-      /* Add your active link style, e.g., color, underline */
-      font-weight: bold; /* Example */
-      color: var(--primary-color, #ff6347); /* Example, use your theme color */
-    }
-  
-  
-    .hamburger {
-      display: none; /* Will be shown by media query in your global style.css */
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 0;
-    }
-  
-    .bar {
-      display: block;
-      width: 25px;
-      height: 3px;
-      margin: 5px auto;
-      background-color: #333; /* Or your bar color */
-      transition: all 0.3s ease-in-out;
-    }
-  
-    /* Example for hamburger active state based on your CSS structure */
-    /* Your style.css likely has more sophisticated hamburger animations */
-    @media (max-width: 768px) { /* Or your mobile breakpoint */
-      .hamburger {
-        display: block; /* Show hamburger on mobile */
-      }
-  
-      .nav-menu {
-        position: fixed; /* Or absolute, depending on your design */
-        left: -100%; /* Hidden by default */
-        top: 70px; /* Adjust based on navbar height */
-        flex-direction: column;
-        background-color: #fff; /* Or your menu background */
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 80px;
         width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        gap: 0;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        z-index: 100; /* Ensure it's above other content */
-      }
-  
-      .nav-menu.active {
-        left: 0; /* Show menu */
-      }
-  
-      .nav-item {
-        margin: 16px 0;
-      }
-  
-      .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-      }
-      .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-      }
-      .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-      }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 var(--spacing-lg);
+        background-color: var(--color-light);
+        box-shadow: var(--shadow-sm);
+        z-index: 1000;
     }
 
-    @media(max-width:980px) {
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 50px;
+        width: auto;
+    }
+
+    .nav-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--spacing-xl);
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .nav-link {
+        color: var(--color-dark);
+        font-weight: 500;
+        text-decoration: none;
+        position: relative;
+        padding: var(--spacing-xs) 0;
+        transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: var(--primary-color, #ff6347);
+    }
+
+    .nav-link[aria-current='page'] {
+        font-weight: bold;
+        color: var(--primary-color, #ff6347);
+    }
+
+    .hamburger {
+        display: none;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 0;
+        z-index: 1001;
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: var(--color-dark);
+        transition: all 0.3s ease-in-out;
+    }
+
+    @media (max-width: 980px) {
         .hamburger {
             display: block;
         }
         
         .nav-menu {
-            position: absolute;
+            position: fixed;
             left: -100%;
-            top: 70px;
+            top: 80px;
             gap: 0;
             flex-direction: column;
             background-color: var(--color-light);
             width: 100%;
+            height: calc(100vh - 80px);
             text-align: center;
-            transition: 0.3s;
+            transition: 0.3s ease-in-out;
+            padding: 2rem 0;
+            box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-menu.active {
+            left: 0;
+        }
+
+        .nav-item {
+            margin: 1.5rem 0;
+        }
+
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
         }
     }
-  </style>
+</style>
