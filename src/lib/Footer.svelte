@@ -42,27 +42,122 @@
   </div>
   
   <style>
-    /* Your style.css likely handles most of these styles. */
-    /* Add any specific, scoped styles for the footer if necessary. */
     .footer {
-      /* ... your existing footer styles ... */
-      /* Example: background-color: #333; color: white; padding: 20px; */
+      padding: 7% 5%;
+      background-image: url('/images/homepage.jpg');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      z-index: 1;
+      margin-top: 5%;
+      display: flex;
+      flex-direction: row;
+      color: white;
+      gap: 15%;
     }
-    .footer .container {
-      /* ... */
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-overlay);
+      z-index: -1;
     }
-    .about ul, .categories ul, .contact ul {
-      list-style: none;
-      padding: 0;
+
+    .container {
+      width: 35%;
     }
-    .social-links ul {
-      list-style: none;
-      padding: 0;
-      display: flex; /* For horizontal layout */
-      gap: 10px; /* Space between icons */
+
+    .container p {
+      width: 100%;
+      margin-top: 2%;
+      font-size: 16px;
+      font-weight: 300;
+      color: white;
+      margin-left: -0.5%;
     }
-    .social-links a {
-      /* ... your styles for social icons ... */
+
+    .phase {
+      display: flex;
+      flex-direction: row;
+      gap: 1%;
     }
-    /* Ensure Font Awesome styles are applied (handled by global CDN link) */
+
+    .about, .categories, .contact {
+      display: flex;
+      flex-direction: column;
+      gap: 5%;
+      width: 10%;
+      text-align: left;
+    }
+
+    .contact {
+      width: 25%;
+    }
+
+    .footer .social-links {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: row;
+      gap: 5%;
+    }
+
+    .footer .social-links li a {
+      font-size: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .footer .social-links li a:hover {
+      transform: translate(0, -10%);
+    }
+
+    .footer .social-links .fa-facebook {
+      color: #316ff6;
+    }
+
+    .footer .social-links .fa-twitter {
+      color: #1da1f2;
+    }
+
+    .footer .social-links .fa-instagram {
+      color: #cd486b;
+    }
+
+    .footer .social-links .fa-whatsapp {
+      color: #25d366;
+    }
+
+    .about ul li, .categories ul li, .contact ul li {
+      display: flex;
+      flex-direction: column;
+      margin-top: 5%;
+      font-size: 15px;
+    }
+
+    @media (max-width: 900px) {
+      .footer {
+        flex-wrap: wrap;
+        gap: 5%;
+      }
+
+      .container {
+        width: 100%;
+      }
+
+      .about, .categories {
+        width: 45%;
+      }
+
+      .contact {
+        width: 100%;
+      }
+
+      .footer .social-links {
+        gap: 7%;
+      }
+    }
   </style>
