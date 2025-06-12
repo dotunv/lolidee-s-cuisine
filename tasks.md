@@ -29,7 +29,7 @@
 - [x] Move global CSS to `src/app.css` or `src/routes/+layout.svelte`
 - [x] Move page-specific CSS into component `<style>` blocks
 - [x] Use CSS variables and Svelte scoping
-- [ ] Implement responsive design for all pages
+- [x] Implement responsive design for all pages
 - [ ] Add smooth transitions and animations
 - [ ] Optimize for dark mode
 - [ ] Add loading states and transitions

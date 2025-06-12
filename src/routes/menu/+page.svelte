@@ -1,7 +1,8 @@
 <script lang="ts">
     import { page } from "$app/stores";
-    import Navbar from "$lib/Navbar.svelte";
-    import Footer from "$lib/Footer.svelte";
+    import Navbar from "../../components/Navbar.svelte";
+    import Footer from "../../components/Footer.svelte";
+    import MenuItem from "../../components/MenuItem.svelte";
 
     let activeCategory = 'all';
     let searchQuery = '';
@@ -141,41 +142,18 @@
     <div class="container">
         {#each categories as category}
             {#if activeCategory === 'all' || activeCategory === category.id}
-                <section id={category.id} class="menu-section">
+                <section>
                     <h2 class="section-title">{category.name}</h2>
                     <div class="menu-grid">
                         {#each menuItems[category.id as keyof typeof menuItems] as item}
-                            <div class="menu-item">
-                                <div class="menu-item-image">
-                                    <img src={item.image} alt={item.name} />
-                                    <button 
-                                        class="favorite-btn"
-                                        on:click={() => handleFavorite(item.id)}
-                                        aria-label="Add to favorites"
-                                    >
-                                        <i class="fa-regular fa-heart"></i>
-                                    </button>
-                                </div>
-                                <div class="menu-item-content">
-                                    <div class="menu-item-header">
-                                        <h3>{item.name}</h3>
-                                        <div class="rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <span>{item.rating}</span>
-                                        </div>
-                                    </div>
-                                    <p class="description">{item.description}</p>
-                                    <div class="menu-item-footer">
-                                        <span class="price">#{item.price.toLocaleString()}</span>
-                                        <button 
-                                            class="add-to-cart"
-                                            on:click={() => handleAddToCart(item.id)}
-                                        >
-                                            Add to Cart
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+                            <MenuItem
+                                imageSrc={item.image}
+                                title={item.name}
+                                description={item.description}
+                                price={`#${item.price.toLocaleString()}`}
+                                rating={item.rating}
+                                cartItem={item.id}
+                            />
                         {/each}
                     </div>
                 </section>
