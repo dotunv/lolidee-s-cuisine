@@ -8,6 +8,19 @@
 	export let rating = 4.8;
 
 	import styles from './MenuItem.module.css';
+	import { cart } from '$lib/stores/cart';
+
+	function handleAddToCart() {
+		// Extract numeric price from the string (remove # and commas)
+		const numericPrice = parseInt(price.replace(/[#,]/g, ''));
+		
+		cart.addItem({
+			id: cartItem,
+			name: title,
+			price: numericPrice,
+			image: imageSrc
+		});
+	}
 </script>
 
 <div class={styles.menuItem}>
@@ -23,7 +36,7 @@
 			</div>
 			<div class={styles.down}>
 				<h3>{price}</h3>
-				<a class={styles.btn} href="/cart?addItem={cartItem}">Add to Cart</a>
+				<button class={styles.btn} on:click={handleAddToCart}>Add to Cart</button>
 			</div>
 		</div>
 	</div>

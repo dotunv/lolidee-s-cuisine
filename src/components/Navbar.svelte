@@ -1,5 +1,6 @@
 <script lang="ts">
     import { page } from "$app/stores";
+    import { cart } from '$lib/stores/cart';
 
     let isHamburgerActive = false;
 
@@ -25,7 +26,14 @@
     <ul class="nav-menu {isHamburgerActive ? 'active' : ''}" id="navbar-menu">
         <li class="nav-item"><a href="/" class="nav-link" aria-current={$page.url.pathname === '/'} on:click={handleLinkClick}>Home</a></li>
         <li class="nav-item"><a href="/menu" class="nav-link" aria-current={$page.url.pathname  === '/menu'} on:click={handleLinkClick}>Our Menu</a></li>
-        <li class="nav-item"><a href="/cart" class="nav-link" aria-current={$page.url.pathname === '/cart'} on:click={handleLinkClick}>Cart</a></li>
+        <li class="nav-item">
+            <a href="/cart" class="nav-link" aria-current={$page.url.pathname === '/cart'} on:click={handleLinkClick}>
+                Cart
+                {#if $cart.length > 0}
+                    <span class="cart-count">{$cart.length}</span>
+                {/if}
+            </a>
+        </li>
         <li class="nav-item"><a href="/about" class="nav-link" aria-current={$page.url.pathname === '/about'} on:click={handleLinkClick}>About us</a></li>
         <li class="nav-item"><a href="/contact" class="nav-link" aria-current={$page.url.pathname === '/contact'} on:click={handleLinkClick}>Contact us</a></li>
     </ul>
@@ -96,6 +104,19 @@
     .nav-link[aria-current='page'] {
         font-weight: bold;
         color: var(--primary-color, #ff6347);
+    }
+
+    .cart-count {
+        position: absolute;
+        top: -8px;
+        right: -12px;
+        background: var(--color-1);
+        color: var(--color-light);
+        font-size: 0.75rem;
+        padding: 2px 6px;
+        border-radius: 50%;
+        min-width: 18px;
+        text-align: center;
     }
 
     .hamburger {
