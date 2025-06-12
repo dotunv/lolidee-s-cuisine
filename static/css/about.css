@@ -178,4 +178,23 @@
     .story_img, .chef_img {
         height: 25vh;
     }
+}
+
+@media (max-width: 1024px) {
+    .story, .chef {
+        flex-direction: column;
+        gap: 2rem;
+        width: 98%;
+        margin: 3% auto;
+    }
+    .story_img, .chef_img {
+        width: 100%;
+        height: 35vh;
+    }
+    .story_text h2, .chef_text h2 {
+        font-size: 1.3rem;
+    }
+    .story_text p, .chef_text p {
+        font-size: 1rem;
+    }
 } 

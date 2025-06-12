@@ -373,4 +373,26 @@ body{
     .whole .three i {
         flex-basis: 50%;
     }
+}
+
+@media (max-width: 1024px) {
+    .order {
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 98%;
+        margin: 3% auto;
+    }
+    .orders {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    .orders img {
+        height: 18vh;
+    }
+    .horder h2 {
+        font-size: 1.3rem;
+    }
+    .whole, .one, .two {
+        font-size: 1rem;
+    }
 } 

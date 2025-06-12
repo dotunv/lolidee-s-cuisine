@@ -89,6 +89,8 @@
     <meta name="description" content="Explore our diverse menu featuring delicious meals, swallow, soups, and extras" />
 </svelte:head>
 
+<Navbar />
+
 <!-- Menu Hero Section -->
 <section class="menu-hero">
     <div class="container">
@@ -136,13 +138,13 @@
 
 <!-- Menu Sections -->
 <main class="menu-sections">
-    {#each categories as category}
-        {#if activeCategory === 'all' || activeCategory === category.id}
-            <section id={category.id} class="menu-section">
-                <div class="container">
+    <div class="container">
+        {#each categories as category}
+            {#if activeCategory === 'all' || activeCategory === category.id}
+                <section id={category.id} class="menu-section">
                     <h2 class="section-title">{category.name}</h2>
                     <div class="menu-grid">
-                        {#each menuItems[category.id] as item}
+                        {#each menuItems[category.id as keyof typeof menuItems] as item}
                             <div class="menu-item">
                                 <div class="menu-item-image">
                                     <img src={item.image} alt={item.name} />
@@ -176,12 +178,14 @@
                             </div>
                         {/each}
                     </div>
-                </div>
-            </section>
-        {/if}
-    {/each}
+                </section>
+            {/if}
+        {/each}
+    </div>
 </main>
 
+<Footer />
+
 <style>
-    @import '/css/menu.css';
+    @import 'static/css/menu.css';
 </style> 

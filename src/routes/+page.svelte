@@ -1,3 +1,7 @@
+<script>
+  import MenuItem from '../components/MenuItem.svelte';
+</script>
+
 <svelte:head>
   <title>Lolidee's Cuisine - Home</title>
   <meta name="description" content="Every Bite Tells A Story. Explore Lolidee's delicious menu." />
@@ -57,114 +61,54 @@
   </div>
 
   <div class="menu">
-    <div class="menu-item">
-      <div class="menu-item-title">
-        <div class="love">
-          <button aria-label="Add to favorites"><i class="fa-regular fa-heart"></i></button>
-        </div>
-        <img src="/images/images (71).jpeg" alt="Hot Fried Rice" />
-        <div class="menu-item-title-sub">
-          <div class="sub">
-            <h3>Hot Fried Rice <i class="fa-solid fa-star"><span class="h">4.8</span></i></h3>
-            <h5>Freshly made and served hot, an healthy meal for all</h5>
-          </div>
-          <div class="down">
-            <h3>#4,000</h3>
-            <a class="btn" href="/cart?addItem=hot-fried-rice">Add to cart</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="menu-item">
-        <div class="menu-item-title">
-            <div class="love">
-                <button aria-label="Add to favorites"><i class="fa-regular fa-heart"></i></button>
-            </div>
-            <img src="/images/images (73).jpeg" alt="Smoky Jollof Rice" />
-            <div class="menu-item-title-sub">
-                <div class="sub">
-                    <h3>Smoky Jollof Rice <i class="fa-solid fa-star"><span class="h">4.8</span></i></h3>
-                    <h5>Freshly made and served hot, an healthy meal for all</h5>
-                </div>
-                <div class="down">
-                    <h3>#4,000</h3>
-                    <a class="btn" href="/cart?addItem=smoky-jollof-rice">Add to cart</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="menu-item">
-        <div class="menu-item-title">
-            <div class="love">
-                <button aria-label="Add to favorites"><i class="fa-regular fa-heart"></i></button>
-            </div>
-            <img src="/images/images (97).jpeg" alt="Hot Ewa Agoyin" />
-            <div class="menu-item-title-sub">
-                <div class="sub">
-                    <h3>Hot Ewa Agoyin <i class="fa-solid fa-star"><span class="h">4.8</span></i></h3>
-                    <h5>Freshly made and served hot, an healthy meal for all</h5>
-                </div>
-                <div class="down">
-                    <h3>#4,000</h3>
-                    <a class="btn" href="/cart?addItem=hot-ewa-agoyin">Add to cart</a>
-                </div>
-            </div>
-        </div>
-    </div>
-     <div class="menu-item">
-        <div class="menu-item-title">
-            <div class="love">
-                <button aria-label="Add to favorites"><i class="fa-regular fa-heart"></i></button>
-            </div>
-            <img src="/images/images (84).jpeg" alt="Hot Black Amala" />
-            <div class="menu-item-title-sub">
-                <div class="sub">
-                    <h3>Hot Black Amala <i class="fa-solid fa-star"><span class="h">4.8</span></i></h3>
-                    <h5>Freshly made and served hot, an healthy meal for all</h5>
-                </div>
-                <div class="down">
-                    <h3>#4,000</h3>
-                    <a class="btn" href="/cart?addItem=hot-black-amala">Add to cart</a>
-                </div>
-            </div>
-        </div>
-    </div>
-     <div class="menu-item">
-        <div class="menu-item-title">
-            <div class="love">
-                <button aria-label="Add to favorites"><i class="fa-regular fa-heart"></i></button>
-            </div>
-            <img src="/images/images (85).jpeg" alt="Sweet Efo Riro" />
-            <div class="menu-item-title-sub">
-                <div class="sub">
-                    <h3>Sweet Efo Riro <i class="fa-solid fa-star"><span class="h">4.8</span></i></h3>
-                    <h5>Freshly made and served hot, an healthy meal for all</h5>
-                </div>
-                <div class="down">
-                    <h3>#4,000</h3>
-                    <a class="btn" href="/cart?addItem=sweet-efo-riro">Add to cart</a>
-                </div>
-            </div>
-        </div>
-    </div>
-     <div class="menu-item">
-        <div class="menu-item-title">
-            <div class="love">
-                <button aria-label="Add to favorites"><i class="fa-regular fa-heart"></i></button>
-            </div>
-            <img src="/images/images (99).jpeg" alt="White Spaghetti" />
-            <div class="menu-item-title-sub">
-                <div class="sub">
-                    <h3>White Spaghetti <i class="fa-solid fa-star"><span class="h">4.8</span></i></h3>
-                    <h5>Freshly made and served hot, an healthy meal for all</h5>
-                </div>
-                <div class="down">
-                    <h3>#4,000</h3>
-                    <a class="btn" href="/cart?addItem=white-spaghetti">Add to cart</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <MenuItem
+      imageSrc="/images/images (71).jpeg"
+      altText="Hot Fried Rice"
+      title="Hot Fried Rice"
+      description="Freshly made and served hot, an healthy meal for all"
+      price="#4,000"
+      cartItem="hot-fried-rice"
+    />
+    <MenuItem
+      imageSrc="/images/images (73).jpeg"
+      altText="Smoky Jollof Rice"
+      title="Smoky Jollof Rice"
+      description="Freshly made and served hot, an healthy meal for all"
+      price="#4,000"
+      cartItem="smoky-jollof-rice"
+    />
+    <MenuItem
+      imageSrc="/images/images (97).jpeg"
+      altText="Hot Ewa Agoyin"
+      title="Hot Ewa Agoyin"
+      description="Freshly made and served hot, an healthy meal for all"
+      price="#4,000"
+      cartItem="hot-ewa-agoyin"
+    />
+    <MenuItem
+      imageSrc="/images/images (84).jpeg"
+      altText="Hot Black Amala"
+      title="Hot Black Amala"
+      description="Freshly made and served hot, an healthy meal for all"
+      price="#4,000"
+      cartItem="hot-black-amala"
+    />
+    <MenuItem
+      imageSrc="/images/images (85).jpeg"
+      altText="Sweet Efo Riro"
+      title="Sweet Efo Riro"
+      description="Freshly made and served hot, an healthy meal for all"
+      price="#4,000"
+      cartItem="sweet-efo-riro"
+    />
+    <MenuItem
+      imageSrc="/images/images (99).jpeg"
+      altText="White Spaghetti"
+      title="White Spaghetti"
+      description="Freshly made and served hot, an healthy meal for all"
+      price="#4,000"
+      cartItem="white-spaghetti"
+    />
   </div>
 
   <div class="view-more">
