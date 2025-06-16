@@ -1,0 +1,101 @@
+/* General body styling for the about page */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+.hero-section {
+    padding: 4rem 1rem;
+    text-align: center;
+    background-color: var(--color-primary, #f7f7f7); /* Use a variable or default */
+}
+
+.hero-section h2 {
+    font-size: 2.5rem;
+    color: var(--color-dark, #333);
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--color-2, #555);
+}
+
+.content,
+.her {
+    display: flex;
+    flex-direction: column; /* Stack on small screens */
+    align-items: center;
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem; /* Spacing between image and text */
+}
+
+.content:nth-of-type(odd) {
+    background-color: var(--color-light, #fff);
+}
+
+.content:nth-of-type(even) {
+    background-color: var(--color-light-alt, #f0f0f0);
+}
+
+.content .image,
+.her .img {
+    flex: 1;
+    min-width: 300px; /* Ensure image doesn't get too small */
+    max-width: 500px; /* Control max width of image */
+}
+
+.content img,
+.her img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content .text,
+.her .text {
+    flex: 2;
+    text-align: center; /* Center text on small screens */
+}
+
+.content h3,
+.her h3 {
+    font-size: 2rem;
+    color: var(--color-dark, #333);
+    margin-bottom: 1rem;
+}
+
+.content p,
+.her p {
+    font-size: 1rem;
+    color: var(--color-2, #555);
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+    .content,
+    .her {
+        flex-direction: row; /* Side-by-side on larger screens */
+        text-align: left; /* Align text left on larger screens */
+    }
+
+    .content:nth-of-type(odd) .image {
+        order: 2; /* Image on right for odd sections */
+    }
+
+    .content:nth-of-type(even) .image {
+        order: 1; /* Image on left for even sections */
+    }
+
+    .content .text,
+    .her .text {
+        text-align: left; /* Align text left on larger screens */
+    }
+} 
